@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/my-city-checklist/static/css/main.48f524f6.css",
+    "main.js": "/my-city-checklist/static/js/main.388515ed.js",
+    "index.html": "/my-city-checklist/index.html",
+    "main.48f524f6.css.map": "/my-city-checklist/static/css/main.48f524f6.css.map",
+    "main.388515ed.js.map": "/my-city-checklist/static/js/main.388515ed.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.48f524f6.css",
+    "static/js/main.388515ed.js"
+  ]
+}
