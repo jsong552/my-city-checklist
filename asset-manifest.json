@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/my-city-checklist/static/css/main.48f524f6.css",
-    "main.js": "/my-city-checklist/static/js/main.9730c4c5.js",
+    "main.js": "/my-city-checklist/static/js/main.d46aeb0f.js",
     "index.html": "/my-city-checklist/index.html",
     "main.48f524f6.css.map": "/my-city-checklist/static/css/main.48f524f6.css.map",
-    "main.9730c4c5.js.map": "/my-city-checklist/static/js/main.9730c4c5.js.map"
+    "main.d46aeb0f.js.map": "/my-city-checklist/static/js/main.d46aeb0f.js.map"
   },
   "entrypoints": [
     "static/css/main.48f524f6.css",
-    "static/js/main.9730c4c5.js"
+    "static/js/main.d46aeb0f.js"
   ]
 }
