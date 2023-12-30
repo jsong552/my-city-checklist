@@ -1,0 +1,36 @@
+body {
+    margin: 0px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    justify-content: center;
+    background-color: #F6595A;
+}
+
+.navbar img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.navbar p {
+    color: white;
+    font-family: Montserrat;
+    font-weight: 600;
+}
+
+/* card styles */
+
+.cardContainer {
+    border: 1px solid black;
+}
+
+.imageOfLocation {
+    height: 250px;
+    width: 175px;
+    border-radius: 9px;;
+
+    object-fit: cover;
+}

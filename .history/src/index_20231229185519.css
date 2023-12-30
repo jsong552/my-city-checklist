@@ -1,0 +1,54 @@
+body {
+    margin: 0px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    justify-content: center;
+    background-color: #F6595A;
+}
+
+.navbar img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.navbar p {
+    color: white;
+    font-family: Montserrat;
+    font-weight: 600;
+}
+
+/* card styles */
+
+.cardsContainer {
+    margin-left: 40px;
+    margin-top: 40px;
+}
+
+.card {
+    display: flex;
+    font-family: Montserrat;
+}
+
+.imageOfLocation {
+    height: 250px;
+    width: 175px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.cardInfo {
+    margin-left: 20px;
+    padding-top: 20px;
+}
+
+.locationMarker {
+    width: 12px;
+}
+
+.cardLocation * {
+    display: inline;
+}
