@@ -1,4 +1,4 @@
-# Dynamic React App, using HTML, CSS, ReactJS, FetchAPI, PixabayAPI, CityAPI, JSON
+# Dynamic React App, using HTML, CSS, JavaScript, ReactJS, FetchAPI, PixabayAPI, CityAPI, JSON
 
 Preview Mode: Removes all menu options for cleaner screenshots
 
