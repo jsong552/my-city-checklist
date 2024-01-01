@@ -194,24 +194,23 @@ export default function App() {
         let imageListLength = allData[index].images.length;
         let nextIndex = indexLoop(allData[index].imageIndex, imageListLength-1);
 
-        if (imageListLength > 0) {
-            setAllData(prevData => {
-                return prevData.map((cardData) => {
-                    if (cardData.id === id) {
-                        return (
-                            {
-                                ...cardData,
-                                imageIndex: nextIndex,
-                                image: cardData.images[nextIndex].largeImageURL
-                            }
-                        )
-                    }
-                    else {
-                        return {...cardData};
-                    }
-                })
+        setAllData(prevData => {
+            return prevData.map((cardData) => {
+                if (cardData.id === id) {
+                    return (
+                        {
+                            ...cardData,
+                            imageIndex: nextIndex,
+                            image: cardData.images[nextIndex].largeImageURL
+                        }
+                    )
+                }
+                else {
+                    return {...cardData};
+                }
             })
-        }
+        })
+        
     }
 
     function indexLoop(currentIndex, maxIndex) {

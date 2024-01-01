@@ -240,7 +240,6 @@ body {
     color: #757575;
     padding: 3px;
     text-indent: 5px;
-    width: 35%;
 }
 
 .newCity {
@@ -251,7 +250,6 @@ body {
     padding: 5px;
     text-indent: 5px;
     margin-top: 10px;
-    width: 50%;
 }
 
 .newDesc {
@@ -516,6 +514,7 @@ body {
         top: 18px;
         left: -50px;
     }
+
 }
 
 @media (max-width: 580px) {
@@ -565,15 +564,6 @@ body {
         margin: auto;
         position: relative;
         left: 10px;
-    }
-
-    .newCity {
-        margin-top: 0px;
-        width: 70%;
-    }
-
-    .newProvince {
-        width: 50%;
     }
 }
 
