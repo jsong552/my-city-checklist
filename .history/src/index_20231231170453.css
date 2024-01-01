@@ -11,7 +11,7 @@ body {
     align-items: center;
     padding: 10px;
     justify-content: center;
-    background: linear-gradient(90deg, #f83b3b 1.18%, #f97979 100%);
+    background-color: #F6595A;
     box-sizing: border-box;
 }
 
@@ -57,17 +57,6 @@ body {
     background-color: transparent;
     border: none;
     outline: none;
-    transition: transform 0.25s;
-}
-
-.card .cardMenuDots:hover {
-    cursor: pointer;
-    transform: scale(1.15);
-}
-
-.card .cardMenuDots:active {
-    cursor: pointer;
-    transform: scale(1.35);
 }
 
 .cardMenu {
@@ -80,8 +69,6 @@ body {
     top: 25px;
     right: 30px;
     background-color: #fafafa;
-    animation-name: fadeIn;
-    animation-duration: 0.25s;
 }
 
 .cardMenu .border {
@@ -93,23 +80,12 @@ body {
     background-image: url('../public/images/trashIcon.png');
     background-repeat: no-repeat;
     background-size: contain;
-    background-size: 20%;
+    background-size: 30%;
     background-position-y: 9px;
-    background-position-x: 5px;
-}
-
-.cardEdit {
-    background-image: url('../public/images/editIcon.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-size: 20%;
-    background-position-y: 9px;
-    background-position-x: 10px;
 }
 
 .cardDelete, .cardEdit {
     padding: 10px;
-    padding-left: 30px;
     font-family: Montserrat;
     background-color: transparent;
     border: none;
@@ -130,8 +106,6 @@ body {
 .imageOfLocation {
     height: 275px;
     width: 210px;
-    min-height: 275px;
-    min-width: 210px;
     border-radius: 10px;
     object-fit: cover;
     transition: transform 0.25s;
@@ -188,64 +162,6 @@ body {
     margin-top: 0px;
     font-size: 0.8rem;
     letter-spacing: -0.4px;
-}
-
-/* edit item form styles  */
-
-.newProvince, .newCity, .newDesc {
-    font-family: Montserrat;
-    border: 1px solid #bbbbbb;
-    border-radius: 8px;
-    background-color: #fafafa;
-}
-
-.newProvince {
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: 0.9rem;
-    color: #757575;
-    padding: 3px;
-    text-indent: 5px;
-}
-
-.newCity {
-    letter-spacing: -1.5px;
-    text-transform: capitalize;
-    font-size: 2rem;
-    font-weight: 700;
-    padding: 5px;
-    text-indent: 5px;
-    margin-top: 10px;
-}
-
-.newDesc {
-    margin-top: 0px;
-    font-size: 0.8rem;
-    letter-spacing: -0.4px;
-    width: 95%;
-    height: 25%;
-}
-
-.saveChanges {
-    margin-top: 7px;
-    padding: 6px 40px;
-    font-family: Montserrat;
-    font-size: 18px;
-    border: 1px solid #bbbbbb;
-    border-radius: 8px;
-    background: linear-gradient(90deg, #f97979 1.18%, #f83b3b 100%);
-    color: white;
-    transition: transform 0.25s;
-}
-
-.saveChanges:hover {
-    cursor: pointer;
-    transform: scale(1.1);
-}
-
-.saveChanges:active {
-    cursor: pointer;
-    transform: scale(1.15);
 }
 
 /* add item form and button styles  */

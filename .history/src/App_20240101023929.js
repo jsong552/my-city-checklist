@@ -10,16 +10,8 @@ import AddItem from "./components/AddItem.js";
 //     add link google maps link functionality example link below  DONE!!
 // https://www.google.com/maps/search/?api=1&query=centurylink+field
 // URL encodings: encodeURIComponent()
-//     add fetchAPI for images (maybe generate new image option) done 
-//     add populationAPI? done
-
-// TODO TOMMORROW:
-//  error handling for API calls (there should be 4)
-// change default page to just one card with data given by APIs 
-// not neccesarily an API call, but just download their information and
-// log it in the cardData.js. This way, we can add the image clicking
-// functionality on the card that already exists as well.
-
+//     add fetchAPI for images (maybe generate new image option)
+//     add populationAPI?
 //     add changeImage on clicking the image functionality
 
 export default function App() {
@@ -84,18 +76,6 @@ export default function App() {
         })
     }
 
-    function addSpacesToNum(num) {
-        let numStr = num.toString();
-        let counter = 1;
-        for (let i = numStr.length-1; i > 0; i--) {
-            if (counter % 3 === 0) {
-                numStr = numStr.slice(0, i) + " " + numStr.slice(i);
-            }
-            counter++
-        }
-        return numStr;
-    }
-
     function handleSaveClick(id, event) {
         event.preventDefault();
 
@@ -127,7 +107,7 @@ export default function App() {
             const popRes = await popResponse.json();
             let pop = "Unknown";
             if (popRes[0].population) {
-                pop = addSpacesToNum(popRes[0].population);
+                pop = popRes[0].population;
             }
 
             setAllData((prevData) => {
@@ -194,7 +174,7 @@ export default function App() {
             const popRes = await popResponse.json();
             let pop = "Unknown";
             if (popRes[0].population) {
-                pop = addSpacesToNum(popRes[0].population);
+                pop = popRes[0].population;
             }
 
             setAllData(prevData => (

@@ -37,7 +37,7 @@ export default function Card(props) {
                          />
                     }
                     {!props.info.showEditMenu && <h4>{props.info.province}</h4>}
-                    <a href={props.info.link} target="_blank">View on Google Maps</a>
+                    <a href={props.info.link}>View on Google Maps</a>
                 </span>
                 {!props.info.showEditMenu && <h1>{props.info.city}</h1>}
                 {props.info.showEditMenu && <br />}

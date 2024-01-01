@@ -130,8 +130,6 @@ body {
 .imageOfLocation {
     height: 275px;
     width: 210px;
-    min-height: 275px;
-    min-width: 210px;
     border-radius: 10px;
     object-fit: cover;
     transition: transform 0.25s;

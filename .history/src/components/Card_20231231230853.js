@@ -29,36 +29,31 @@ export default function Card(props) {
                     <img className="locationMarker" src='/my-city-checklist/images/location-marker.png' alt=""/>
                     {props.info.showEditMenu && <input 
                         type="text"
-                        name="province"
+                        name="editProvince"
                         className="newProvince"
-                        onChange={(event) => props.handleEditChange(props.id, event)}
-                        // placeholder={props.info.province}
-                        value={props.info.province}
+                        onChange={props.handleEditChange}
                          />
                     }
                     {!props.info.showEditMenu && <h4>{props.info.province}</h4>}
-                    <a href={props.info.link} target="_blank">View on Google Maps</a>
+                    <a href={props.info.link}>View on Google Maps</a>
                 </span>
                 {!props.info.showEditMenu && <h1>{props.info.city}</h1>}
                 {props.info.showEditMenu && <br />}
                 {props.info.showEditMenu && <input 
                     type="text"
-                    name="city"
+                    name="editCity"
                     className="newCity"
-                    onChange={(event) => props.handleEditChange(props.id, event)}
-                    // placeholder={props.info.city}
-                    value={props.info.city}
+                    onChange={props.handleEditChange}
                      />
                 }
                 <h3>Population: {props.info.population}</h3>
                 {!props.info.showEditMenu && <p>{props.info.desc}
                 </p>}
                 {props.info.showEditMenu && <textarea
-                    name="desc"
+                    name="editDesc"
                     className="newDesc"
-                    onChange={(event) => props.handleEditChange(props.id, event)}
-                    // placeholder={props.info.desc}
-                    value={props.info.desc}
+                    onChange={props.handleEditChange}
+                    
                     ></textarea>
                 }
                 {props.info.showEditMenu && <br />}
@@ -66,7 +61,7 @@ export default function Card(props) {
                     type="submit"
                     name="city"
                     className="saveChanges"
-                    onClick={(event) => props.handleSaveClick(props.id, event)}
+                    onChange={props.handleSaveClick}
                     value="Save" />
                 }
             </div>

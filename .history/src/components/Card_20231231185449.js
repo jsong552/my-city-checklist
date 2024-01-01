@@ -31,24 +31,19 @@ export default function Card(props) {
                         type="text"
                         name="province"
                         className="newProvince"
-                        onChange={(event) => props.handleEditChange(props.id, event)}
-                        // placeholder={props.info.province}
-                        value={props.info.province}
-                         />
+                        onChange={props.handleChange}
+                        value={props.formData.province} />
                     }
                     {!props.info.showEditMenu && <h4>{props.info.province}</h4>}
-                    <a href={props.info.link} target="_blank">View on Google Maps</a>
+                    <a href={props.info.link}>View on Google Maps</a>
                 </span>
                 {!props.info.showEditMenu && <h1>{props.info.city}</h1>}
-                {props.info.showEditMenu && <br />}
                 {props.info.showEditMenu && <input 
                     type="text"
                     name="city"
                     className="newCity"
-                    onChange={(event) => props.handleEditChange(props.id, event)}
-                    // placeholder={props.info.city}
-                    value={props.info.city}
-                     />
+                    onChange={props.handleChange}
+                    value={props.formData.city} />
                 }
                 <h3>Population: {props.info.population}</h3>
                 {!props.info.showEditMenu && <p>{props.info.desc}
@@ -56,18 +51,9 @@ export default function Card(props) {
                 {props.info.showEditMenu && <textarea
                     name="desc"
                     className="newDesc"
-                    onChange={(event) => props.handleEditChange(props.id, event)}
-                    // placeholder={props.info.desc}
-                    value={props.info.desc}
-                    ></textarea>
-                }
-                {props.info.showEditMenu && <br />}
-                {props.info.showEditMenu && <input Edit
-                    type="submit"
-                    name="city"
-                    className="saveChanges"
-                    onClick={(event) => props.handleSaveClick(props.id, event)}
-                    value="Save" />
+                    onChange={props.handleChange}
+                    value={props.formData.desc}
+                    ></textarea>    
                 }
             </div>
         </div>

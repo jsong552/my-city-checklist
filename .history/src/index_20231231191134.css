@@ -11,7 +11,7 @@ body {
     align-items: center;
     padding: 10px;
     justify-content: center;
-    background: linear-gradient(90deg, #f83b3b 1.18%, #f97979 100%);
+    background-color: #F6595A;
     box-sizing: border-box;
 }
 
@@ -130,8 +130,6 @@ body {
 .imageOfLocation {
     height: 275px;
     width: 210px;
-    min-height: 275px;
-    min-width: 210px;
     border-radius: 10px;
     object-fit: cover;
     transition: transform 0.25s;

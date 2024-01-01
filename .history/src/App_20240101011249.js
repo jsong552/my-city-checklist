@@ -10,16 +10,8 @@ import AddItem from "./components/AddItem.js";
 //     add link google maps link functionality example link below  DONE!!
 // https://www.google.com/maps/search/?api=1&query=centurylink+field
 // URL encodings: encodeURIComponent()
-//     add fetchAPI for images (maybe generate new image option) done 
-//     add populationAPI? done
-
-// TODO TOMMORROW:
-//  error handling for API calls (there should be 4)
-// change default page to just one card with data given by APIs 
-// not neccesarily an API call, but just download their information and
-// log it in the cardData.js. This way, we can add the image clicking
-// functionality on the card that already exists as well.
-
+//     add fetchAPI for images (maybe generate new image option)
+//     add populationAPI?
 //     add changeImage on clicking the image functionality
 
 export default function App() {
@@ -84,71 +76,23 @@ export default function App() {
         })
     }
 
-    function addSpacesToNum(num) {
-        let numStr = num.toString();
-        let counter = 1;
-        for (let i = numStr.length-1; i > 0; i--) {
-            if (counter % 3 === 0) {
-                numStr = numStr.slice(0, i) + " " + numStr.slice(i);
-            }
-            counter++
-        }
-        return numStr;
-    }
-
     function handleSaveClick(id, event) {
         event.preventDefault();
-
-        let index = 0;
-        for (let i = 0; i < allData.length; i++) {
-            if (allData[i].id === id) {
-                index = i;
-                break;
-            }
-        }
-
-        async function getInfo() {
-            const res = await fetch(`https://pixabay.com/api/?key=41573030-f1169bdc2df9b8a1ffff0daec&q=${encodeURIComponent(`${allData[index].city} ${allData[index].province} city`)}`);
-            const data = await res.json();
-
-            const name = allData[index].city;
-            const apiKey = 'pFA5kUB4bM4JzM1OukNadQ==mGBf8trcncp9XlfY';
-  
-            const apiUrl = `https://api.api-ninjas.com/v1/city?name=${encodeURIComponent(name)}`;
-  
-            const popResponse = await fetch(apiUrl, {
-                method: 'GET',
-                headers: {
-                    'X-Api-Key': apiKey,
-                    'Content-Type': 'application/json',
-                },
-            });
-
-            const popRes = await popResponse.json();
-            let pop = "Unknown";
-            if (popRes[0].population) {
-                pop = addSpacesToNum(popRes[0].population);
-            }
-
-            setAllData((prevData) => {
-                return prevData.map(cardData => {
-                    if (cardData.id === id) {
-                        let query = encodeURIComponent(cardData.city);
-                        return {
-                            ...cardData,
-                            showEditMenu: false,
-                            link: `https://www.google.com/maps/search/?api=1&query=${query}`,
-                            image: data.hits[0].largeImageURL,
-                            population: pop
-                        }
+        setAllData((prevData) => {
+            return prevData.map(cardData => {
+                if (cardData.id === id) {
+                    let query = encodeURIComponent(cardData.city);
+                    return {
+                        ...cardData,
+                        showEditMenu: false,
+                        link: `https://www.google.com/maps/search/?api=1&query=${query}`
                     }
-                    else {
-                        return cardData;
-                    }
-                })
+                }
+                else {
+                    return cardData;
+                }
             })
-        }
-        getInfo();
+        })
     }
 
     function closeCardMenu() {
@@ -174,28 +118,12 @@ export default function App() {
         event.preventDefault();
         setShowForm(false);
 
-        async function getInfo() {
-            const imageRes = await fetch(`https://pixabay.com/api/?key=41573030-f1169bdc2df9b8a1ffff0daec&q=${encodeURIComponent(`${formData.city} ${formData.province} city`)}`);
-            const data = await imageRes.json();
+        // alert("formData.city: " + formData.city);
+        // alert("formData.province: " + formData.province);
 
-            const name = formData.city;
-            const apiKey = 'pFA5kUB4bM4JzM1OukNadQ==mGBf8trcncp9XlfY';
-  
-            const apiUrl = `https://api.api-ninjas.com/v1/city?name=${encodeURIComponent(name)}`;
-  
-            const popResponse = await fetch(apiUrl, {
-                method: 'GET',
-                headers: {
-                    'X-Api-Key': apiKey,
-                    'Content-Type': 'application/json',
-                },
-            });
-
-            const popRes = await popResponse.json();
-            let pop = "Unknown";
-            if (popRes[0].population) {
-                pop = addSpacesToNum(popRes[0].population);
-            }
+        async function getImages() {
+            const res = await fetch(`https://pixabay.com/api/?key=41573030-f1169bdc2df9b8a1ffff0daec&q=${encodeURIComponent(`${formData.city} ${formData.province} city`)}`);
+            const data = await res.json();
 
             setAllData(prevData => (
                 [
@@ -206,7 +134,7 @@ export default function App() {
                         city: formData.city,
                         alt: `A picture of ${formData.city}`,
                         image: data.hits[0].largeImageURL,
-                        population: pop,
+                        population: "unknown",
                         desc: formData.desc,
                         link: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(formData.city)}`,
                         editProvince: "",
@@ -215,8 +143,10 @@ export default function App() {
                     }
                 ]
             ))
+
+            // console.log(data.hits[0].largeImageURL);
         }
-        getInfo();
+        getImages();
 
         // setAllData(prevData => (
         //     [

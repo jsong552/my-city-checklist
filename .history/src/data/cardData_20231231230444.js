@@ -10,6 +10,9 @@ export default [
         link: "https://www.google.com/maps/place/St.+John's,+NL/@47.4825126,-52.9947887,11z/data=!3m1!4b1!4m6!3m5!1s0x4b0ca38e6b0aa261:0x9e1fd4001f12261f!8m2!3d47.5556097!4d-52.7452511!16zL20vMGo4cDY?hl=en&entry=ttu",
         showCardMenu: false,
         showEditMenu: false,
+        editProvince: "",
+        editCity: "",
+        editDesc: "",
     },
     {
         id: 2,
@@ -22,6 +25,9 @@ export default [
         link: "https://www.google.com/maps/place/Rocky+Harbour,+NL/@49.5891506,-57.9687031,13z/data=!3m1!4b1!4m6!3m5!1s0x4b79509be206f3a5:0x67c7444488b85430!8m2!3d49.5904818!4d-57.9151532!16zL20vMGZjaDR3?entry=ttu",
         showCardMenu: false,
         showEditMenu: false,
+        editProvince: "",
+        editCity: "",
+        editDesc: "",
     },
     {
         id: 3,
@@ -34,6 +40,9 @@ export default [
         link: "https://www.google.com/maps/place/Gander,+NL/@48.9465292,-54.6097603,12z/data=!3m1!4b1!4m6!3m5!1s0x4b76f2f3b657f0b9:0xa1489058bc89ec6!8m2!3d48.9564842!4d-54.6083708!16zL20vMDI4bjM4?entry=ttu",
         showCardMenu: false,
         showEditMenu: false,
+        editProvince: "",
+        editCity: "",
+        editDesc: "",
     },
     {
         id: 4,
@@ -46,6 +55,9 @@ export default [
         link: "https://www.google.com/maps/place/Qu%C3%A9bec+City,+QC/@46.8571419,-71.3449155,11z/data=!3m1!4b1!4m6!3m5!1s0x4cb8968a05db8893:0x8fc52d63f0e83a03!8m2!3d46.8130816!4d-71.2074596!16zL20vMHBtcDI?entry=ttu",
         showCardMenu: false,
         showEditMenu: false,
+        editProvince: "",
+        editCity: "",
+        editDesc: "",
     },
     {
         id: 5,
@@ -58,6 +70,9 @@ export default [
         link: "https://www.google.com/maps/place/Qu%C3%A9bec+City,+QC/@46.8571419,-71.3449155,11z/data=!3m1!4b1!4m6!3m5!1s0x4cb8968a05db8893:0x8fc52d63f0e83a03!8m2!3d46.8130816!4d-71.2074596!16zL20vMHBtcDI?entry=ttu",
         showCardMenu: false,
         showEditMenu: false,
+        editProvince: "",
+        editCity: "",
+        editDesc: "",
     },
     {
         id: 6,
@@ -70,6 +85,9 @@ export default [
         link: "https://www.google.com/maps/place/Ottawa,+ON/@45.2501566,-75.8002569,9z/data=!3m1!4b1!4m6!3m5!1s0x4cce05b25f5113af:0x8a6a51e131dd15ed!8m2!3d45.4215296!4d-75.6971931!16zL20vMDVrc2g?entry=ttu",
         showCardMenu: false,
         showEditMenu: false,
+        editProvince: "",
+        editCity: "",
+        editDesc: "",
     },
     {
         id: 7,
@@ -82,6 +100,9 @@ export default [
         link: "https://www.google.com/maps/place/Kingston,+ON/@44.339741,-76.6383436,11z/data=!3m1!4b1!4m6!3m5!1s0x4cd2ab0674408ea9:0x76a5497715d6d9ea!8m2!3d44.231345!4d-76.4809694!16zL20vMHQ2c2I?entry=ttu",
         showCardMenu: false,
         showEditMenu: false,
+        editProvince: "",
+        editCity: "",
+        editDesc: "",
     },
     {
         id: 8,
@@ -94,6 +115,9 @@ export default [
         link: "https://www.google.com/maps/place/Toronto,+ON/@45.2501566,-75.8002569,9z/data=!4m6!3m5!1s0x89d4cb90d7c63ba5:0x323555502ab4c477!8m2!3d43.653226!4d-79.3831843!16zL20vMGg3aDY?entry=ttu",
         showCardMenu: false,
         showEditMenu: false,
+        editProvince: "",
+        editCity: "",
+        editDesc: "",
     },
     {
         id: 9,
@@ -106,6 +130,9 @@ export default [
         link: "https://www.google.com/maps/place/Niagara+Falls,+ON/@43.0539325,-79.0880345,11z/data=!3m1!4b1!4m6!3m5!1s0x89d3445eec824db9:0x46d2c56156bda288!8m2!3d43.0895577!4d-79.0849436!16zL20vMDE4bGNf?entry=ttu",
         showCardMenu: false,
         showEditMenu: false,
+        editProvince: "",
+        editCity: "",
+        editDesc: "",
     },
 ]
 

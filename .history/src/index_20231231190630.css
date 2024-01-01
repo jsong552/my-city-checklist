@@ -11,7 +11,7 @@ body {
     align-items: center;
     padding: 10px;
     justify-content: center;
-    background: linear-gradient(90deg, #f83b3b 1.18%, #f97979 100%);
+    background-color: #F6595A;
     box-sizing: border-box;
 }
 
@@ -130,8 +130,6 @@ body {
 .imageOfLocation {
     height: 275px;
     width: 210px;
-    min-height: 275px;
-    min-width: 210px;
     border-radius: 10px;
     object-fit: cover;
     transition: transform 0.25s;
@@ -216,36 +214,14 @@ body {
     padding: 5px;
     text-indent: 5px;
     margin-top: 10px;
+    width: 30%;
 }
 
 .newDesc {
     margin-top: 0px;
     font-size: 0.8rem;
     letter-spacing: -0.4px;
-    width: 95%;
-    height: 25%;
-}
-
-.saveChanges {
-    margin-top: 7px;
-    padding: 6px 40px;
-    font-family: Montserrat;
-    font-size: 18px;
-    border: 1px solid #bbbbbb;
-    border-radius: 8px;
-    background: linear-gradient(90deg, #f97979 1.18%, #f83b3b 100%);
-    color: white;
-    transition: transform 0.25s;
-}
-
-.saveChanges:hover {
-    cursor: pointer;
-    transform: scale(1.1);
-}
-
-.saveChanges:active {
-    cursor: pointer;
-    transform: scale(1.15);
+    width: 80%;
 }
 
 /* add item form and button styles  */

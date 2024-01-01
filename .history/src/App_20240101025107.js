@@ -10,16 +10,8 @@ import AddItem from "./components/AddItem.js";
 //     add link google maps link functionality example link below  DONE!!
 // https://www.google.com/maps/search/?api=1&query=centurylink+field
 // URL encodings: encodeURIComponent()
-//     add fetchAPI for images (maybe generate new image option) done 
-//     add populationAPI? done
-
-// TODO TOMMORROW:
-//  error handling for API calls (there should be 4)
-// change default page to just one card with data given by APIs 
-// not neccesarily an API call, but just download their information and
-// log it in the cardData.js. This way, we can add the image clicking
-// functionality on the card that already exists as well.
-
+//     add fetchAPI for images (maybe generate new image option)
+//     add populationAPI?
 //     add changeImage on clicking the image functionality
 
 export default function App() {
