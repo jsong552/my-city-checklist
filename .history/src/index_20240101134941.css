@@ -486,7 +486,7 @@ body {
     }
 
     .navbar .previewMode {
-        font-size: 14px;
+        font-size: 12px;
         top: 38%;
         right: 10px;
     }
@@ -494,20 +494,18 @@ body {
     .addItemForm input:not(.addCityButton), textarea {
         margin-top: 3px;
         padding: 8px;
-        font-size: 14px;
-        width: 130px;
+        font-size: 12px;
     }
 
     .provinceLabel, .cityLabel, .descLabel {
-        font-size: 14px;
+        font-size: 12px;
     }
     
     .backButton {
-        height: 28px;
-        width: 28px;
-        position: absolute;
-        top: 18px;
-        left: -50px;
+        width: 30px;
+        height: 30px;
+        right: -50px;
+        top: 20px;
     }
 
 }
@@ -552,13 +550,6 @@ body {
     .cardLocation a {
         width: fit-content;
         margin-left: 0px;
-    }
-
-    .addItemFormContainer {
-        width: fit-content;
-        margin: auto;
-        position: relative;
-        left: 10px;
     }
 }
 
@@ -612,32 +603,6 @@ body {
         width: fit-content;
         margin-left: 0px;
     }
-
-    .addItemForm input:not(.addCityButton), textarea {
-        margin-top: 3px;
-        padding: 7px;
-        font-size: 12px;
-        width: 90px;
-    }
-
-    .provinceLabel, .cityLabel, .descLabel {
-        font-size: 10px;
-    }
-    
-    .backButton {
-        height: 25px;
-        width: 25px;
-        position: absolute;
-        top: 17px;
-        left: -40px;
-    }
-
-    .addItemFormContainer {
-        width: fit-content;
-        margin: auto;
-        position: relative;
-        left: 10px;
-    }
 }
 
 @media (max-width: 380px) {
@@ -661,32 +626,6 @@ body {
         font-size: 11px;
         top: 40%;
         right: 5px;
-    }
-
-    .addItemForm input:not(.addCityButton), textarea {
-        margin-top: 3px;
-        padding: 7px;
-        font-size: 11px;
-        width: 70px;
-    }
-
-    .addCityButton {
-        font-size: 12px;
-    }
-    
-    .backButton {
-        height: 25px;
-        width: 25px;
-        position: absolute;
-        top: 17px;
-        left: -40px;
-    }
-
-    .addItemFormContainer {
-        width: fit-content;
-        margin: auto;
-        position: relative;
-        left: 10px;
     }
 }
 

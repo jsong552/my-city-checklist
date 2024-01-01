@@ -6,15 +6,6 @@ body {
     margin: 0px;
 }
 
-.container, #root, body, html {
-    height: 100%;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-}
-
 .navbar {
     display: flex;
     align-items: center;
@@ -22,30 +13,6 @@ body {
     justify-content: center;
     background: linear-gradient(90deg, #f83b3b 1.18%, #f97979 100%);
     box-sizing: border-box;
-    position: relative;
-}
-
-.navbar .previewMode {
-    position: absolute;
-    right: 30px;
-    top: 32%;
-    border: none;
-    background-color: transparent;
-    font-family: Montserrat;
-    font-size: 16px;
-    color: white;
-    text-decoration: underline;
-    transition: transform 0.25s;
-}
-
-.navbar .previewMode:hover {
-    cursor: pointer;
-    transform: scale(1.1);
-}
-
-.navbar .previewMode:active {
-    cursor: pointer;
-    transform: scale(1.2);
 }
 
 .navbar img {
@@ -447,17 +414,6 @@ body {
 
 /* different screen sizes */
 
-@media (max-width: 1024px) {
-    .card {
-        width: 85%;
-    }
-
-    .cardInfo p {
-        font-size: 0.7rem;
-        letter-spacing: -0.4px;
-    }
-}
-
 @media (max-width: 768px) {
     .imageOfLocation {
         height: 250px;
@@ -474,42 +430,6 @@ body {
         font-size: 0.7rem;
         letter-spacing: -0.4px;
     }
-
-    .card .cardMenuDots {
-        position: absolute;
-        top: 40px;
-        right: -15px;
-    }
-
-    .navbar {
-        justify-content: space-between;
-    }
-
-    .navbar .previewMode {
-        font-size: 14px;
-        top: 38%;
-        right: 10px;
-    }
-
-    .addItemForm input:not(.addCityButton), textarea {
-        margin-top: 3px;
-        padding: 8px;
-        font-size: 14px;
-        width: 130px;
-    }
-
-    .provinceLabel, .cityLabel, .descLabel {
-        font-size: 14px;
-    }
-    
-    .backButton {
-        height: 28px;
-        width: 28px;
-        position: absolute;
-        top: 18px;
-        left: -50px;
-    }
-
 }
 
 @media (max-width: 580px) {
@@ -552,13 +472,6 @@ body {
     .cardLocation a {
         width: fit-content;
         margin-left: 0px;
-    }
-
-    .addItemFormContainer {
-        width: fit-content;
-        margin: auto;
-        position: relative;
-        left: 10px;
     }
 }
 
@@ -612,32 +525,6 @@ body {
         width: fit-content;
         margin-left: 0px;
     }
-
-    .addItemForm input:not(.addCityButton), textarea {
-        margin-top: 3px;
-        padding: 7px;
-        font-size: 12px;
-        width: 90px;
-    }
-
-    .provinceLabel, .cityLabel, .descLabel {
-        font-size: 10px;
-    }
-    
-    .backButton {
-        height: 25px;
-        width: 25px;
-        position: absolute;
-        top: 17px;
-        left: -40px;
-    }
-
-    .addItemFormContainer {
-        width: fit-content;
-        margin: auto;
-        position: relative;
-        left: 10px;
-    }
 }
 
 @media (max-width: 380px) {
@@ -646,47 +533,6 @@ body {
         width: 105px;
         min-height: 175px;
         min-width: 105px;
-    }
-
-    .navbar .logo {
-        font-size: 13px;
-    }
-
-    .navbar img {
-        width: 20px;
-        margin-right: 5px;
-    }
-
-    .navbar .previewMode {
-        font-size: 11px;
-        top: 40%;
-        right: 5px;
-    }
-
-    .addItemForm input:not(.addCityButton), textarea {
-        margin-top: 3px;
-        padding: 7px;
-        font-size: 11px;
-        width: 70px;
-    }
-
-    .addCityButton {
-        font-size: 12px;
-    }
-    
-    .backButton {
-        height: 25px;
-        width: 25px;
-        position: absolute;
-        top: 17px;
-        left: -40px;
-    }
-
-    .addItemFormContainer {
-        width: fit-content;
-        margin: auto;
-        position: relative;
-        left: 10px;
     }
 }
 

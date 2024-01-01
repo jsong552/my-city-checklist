@@ -3,11 +3,11 @@ import React from "react";
 export default function Card(props) {
     return (
         <div className="card">
-            {!props.preview && <button
+            <button
                 className="cardMenuDots"
                 onClick={(event) => props.handleMenuDotsClick(props.id, event)}
             >
-            </button>}
+            </button>
 
             {props.info.showCardMenu && <div className="cardMenu">
                 <button

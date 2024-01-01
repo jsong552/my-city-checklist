@@ -486,7 +486,7 @@ body {
     }
 
     .navbar .previewMode {
-        font-size: 14px;
+        font-size: 12px;
         top: 38%;
         right: 10px;
     }
@@ -494,12 +494,11 @@ body {
     .addItemForm input:not(.addCityButton), textarea {
         margin-top: 3px;
         padding: 8px;
-        font-size: 14px;
-        width: 130px;
+        font-size: 11px;
     }
 
     .provinceLabel, .cityLabel, .descLabel {
-        font-size: 14px;
+        font-size: 11px;
     }
     
     .backButton {
@@ -552,13 +551,6 @@ body {
     .cardLocation a {
         width: fit-content;
         margin-left: 0px;
-    }
-
-    .addItemFormContainer {
-        width: fit-content;
-        margin: auto;
-        position: relative;
-        left: 10px;
     }
 }
 
@@ -616,12 +608,11 @@ body {
     .addItemForm input:not(.addCityButton), textarea {
         margin-top: 3px;
         padding: 7px;
-        font-size: 12px;
-        width: 90px;
+        font-size: 9px;
     }
 
     .provinceLabel, .cityLabel, .descLabel {
-        font-size: 10px;
+        font-size: 9px;
     }
     
     .backButton {
@@ -661,32 +652,6 @@ body {
         font-size: 11px;
         top: 40%;
         right: 5px;
-    }
-
-    .addItemForm input:not(.addCityButton), textarea {
-        margin-top: 3px;
-        padding: 7px;
-        font-size: 11px;
-        width: 70px;
-    }
-
-    .addCityButton {
-        font-size: 12px;
-    }
-    
-    .backButton {
-        height: 25px;
-        width: 25px;
-        position: absolute;
-        top: 17px;
-        left: -40px;
-    }
-
-    .addItemFormContainer {
-        width: fit-content;
-        margin: auto;
-        position: relative;
-        left: 10px;
     }
 }
 

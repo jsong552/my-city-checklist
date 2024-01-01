@@ -173,7 +173,8 @@ export default function App() {
         getInfo();
     }
 
-    function closeCardMenu() {    
+    function closeCardMenu() {      // also turns off preview mode!
+        setPreviewMode(false);
         setAllData(prevData => {
             return prevData.map(cardData => {
                 return {...cardData, showCardMenu: false};
@@ -237,7 +238,7 @@ export default function App() {
         setShowForm(false);
 
         async function getInfo() {
-            const imageRes = await fetch(`https://pixabay.com/api/?key=41573030-f1169bdc2df9b8a1ffff0daec&q=${encodeURIComponent(`${formData.city} ${formData.province}`)}`);
+            const imageRes = await fetch(`https://pixabay.com/api/?key=41573030-f1169bdc2df9b8a1ffff0daec&q=${encodeURIComponent(`${formData.city} ${formData.province} city`)}`);
             const imageData = await imageRes.json();
 
             const name = formData.city;
@@ -358,7 +359,6 @@ export default function App() {
                     handleEditChange={handleEditChange}
                     handleSaveClick={handleSaveClick}
                     formData={formData}
-                    preview={previewMode}
                     handleImageClick={handleImageClick}
                 />
         }
@@ -371,7 +371,6 @@ export default function App() {
             onClick={closeCardMenu}
         >
             <Navbar 
-                preview={previewMode}
                 handlePreviewToggle={handlePreviewToggle} />
             <div className="cardsContainer">
                 {allCards}

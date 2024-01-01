@@ -237,7 +237,7 @@ export default function App() {
         setShowForm(false);
 
         async function getInfo() {
-            const imageRes = await fetch(`https://pixabay.com/api/?key=41573030-f1169bdc2df9b8a1ffff0daec&q=${encodeURIComponent(`${formData.city} ${formData.province}`)}`);
+            const imageRes = await fetch(`https://pixabay.com/api/?key=41573030-f1169bdc2df9b8a1ffff0daec&q=${encodeURIComponent(`${formData.city} ${formData.province} city`)}`);
             const imageData = await imageRes.json();
 
             const name = formData.city;
