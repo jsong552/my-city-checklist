@@ -20,7 +20,7 @@ import AddItem from "./components/AddItem.js";
 // log it in the cardData.js. This way, we can add the image clicking
 // functionality on the card that already exists as well.
 
-//     add changeImage on clicking the image functionality  DONE!!!
+//     add changeImage on clicking the image functionality
 
 export default function App() {
     let [showForm, setShowForm] = React.useState(false);
@@ -189,24 +189,7 @@ export default function App() {
         }
 
         let imageListLength = allData[index].images.length;
-        let nextIndex = indexLoop(allData[index].imageIndex, imageListLength-1);
-
-        setAllData(prevData => {
-            return prevData.map((cardData) => {
-                if (cardData.id === id) {
-                    return (
-                        {
-                            ...cardData,
-                            imageIndex: nextIndex,
-                            image: cardData.images[nextIndex].largeImageURL
-                        }
-                    )
-                }
-                else {
-                    return {...cardData};
-                }
-            })
-        })
+        let nextIndex = indexLoop()
         
     }
 
@@ -272,19 +255,11 @@ export default function App() {
                 newAlt = "Unable to generate image";
             }
 
-            let newID;
-            if (allData.length > 0) {
-                newID = allData[allData.length - 1].id + 1;
-            }
-            else {
-                newID = 1;
-            }
-
             setAllData(prevData => (
                 [
                     ...prevData,
                     {
-                        id: newID,
+                        id: prevData[prevData.length - 1].id + 1,
                         province: formData.province,
                         city: formData.city,
                         alt: newAlt,
@@ -332,10 +307,6 @@ export default function App() {
         })
     }
 
-    function hideForm() {
-        setShowForm(false);
-    }
-
     // MAPPING CARD COMPONENTS FOR USAGE -----------------------------
     let allCards = allData.map((data) => {
         return <Card 
@@ -370,7 +341,6 @@ export default function App() {
                 handleSubmitClick={handleSubmitClick}
                 handleChange={handleChange}
                 formData={formData}
-                hideForm={hideForm}
             />
         </div>
     )

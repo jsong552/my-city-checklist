@@ -14,13 +14,13 @@ import AddItem from "./components/AddItem.js";
 //     add populationAPI? done
 
 // TODO TOMMORROW:
-//  error handling for API calls (there should be 4) done 
+//  error handling for API calls (there should be 4)
 // change default page to just one card with data given by APIs 
 // not neccesarily an API call, but just download their information and
 // log it in the cardData.js. This way, we can add the image clicking
 // functionality on the card that already exists as well.
 
-//     add changeImage on clicking the image functionality  DONE!!!
+//     add changeImage on clicking the image functionality
 
 export default function App() {
     let [showForm, setShowForm] = React.useState(false);
@@ -135,10 +135,8 @@ export default function App() {
 
             let allImages;
             let newAlt;
-            let currentImageIndex = 0;
             try {
                 allImages = imageData.hits;
-                const test = allImages[0].largeImageURL;
                 newAlt = `Picture of ${allData[index].city}`;
             }
             catch (error) {
@@ -154,9 +152,7 @@ export default function App() {
                             ...cardData,
                             showEditMenu: false,
                             link: `https://www.google.com/maps/search/?api=1&query=${query}`,
-                            image: allImages === "" ? allImages : allImages[currentImageIndex].largeImageURL,
-                            images: allImages,
-                            imageIndex: currentImageIndex,
+                            image: allImages === "" ? allImages : allImages[0].largeImageURL,
                             alt: newAlt,
                             population: pop
                         }
@@ -176,46 +172,6 @@ export default function App() {
                 return {...cardData, showCardMenu: false};
             })
         })
-    }
-
-    // generate new image on click function ----------------------------
-    function handleImageClick(id) {
-        let index = 0;
-        for (let i = 0; i < allData.length; i++) {
-            if (allData[i].id === id) {
-                index = i;
-                break;
-            }
-        }
-
-        let imageListLength = allData[index].images.length;
-        let nextIndex = indexLoop(allData[index].imageIndex, imageListLength-1);
-
-        setAllData(prevData => {
-            return prevData.map((cardData) => {
-                if (cardData.id === id) {
-                    return (
-                        {
-                            ...cardData,
-                            imageIndex: nextIndex,
-                            image: cardData.images[nextIndex].largeImageURL
-                        }
-                    )
-                }
-                else {
-                    return {...cardData};
-                }
-            })
-        })
-        
-    }
-
-    function indexLoop(currentIndex, maxIndex) {
-        if (currentIndex === maxIndex) {
-            return 0;
-        }
-        let newIndex = currentIndex + 1;
-        return newIndex;
     }
 
     // add new card form functions -------------------------------------
@@ -261,36 +217,26 @@ export default function App() {
 
             let allImages;
             let newAlt;
-            let currentImageIndex = 0;
             try {
-                allImages = imageData.hits;
                 const test = allImages[0].largeImageURL;
+                allImages = imageData.hits;
                 newAlt = `Picture of ${formData.city}`;
             }
             catch (error) {
+                alert("caught error?");
                 allImages = "";
                 newAlt = "Unable to generate image";
-            }
-
-            let newID;
-            if (allData.length > 0) {
-                newID = allData[allData.length - 1].id + 1;
-            }
-            else {
-                newID = 1;
             }
 
             setAllData(prevData => (
                 [
                     ...prevData,
                     {
-                        id: newID,
+                        id: prevData[prevData.length - 1].id + 1,
                         province: formData.province,
                         city: formData.city,
                         alt: newAlt,
-                        images: allImages,
-                        imageIndex: currentImageIndex,
-                        image: allImages === "" ? allImages : allImages[currentImageIndex].largeImageURL,
+                        image: allImages === "" ? allImages : allImages[0].largeImageURL,
                         population: pop,
                         desc: formData.desc,
                         link: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(formData.city)}`,
@@ -332,10 +278,6 @@ export default function App() {
         })
     }
 
-    function hideForm() {
-        setShowForm(false);
-    }
-
     // MAPPING CARD COMPONENTS FOR USAGE -----------------------------
     let allCards = allData.map((data) => {
         return <Card 
@@ -349,7 +291,6 @@ export default function App() {
                     handleEditChange={handleEditChange}
                     handleSaveClick={handleSaveClick}
                     formData={formData}
-                    handleImageClick={handleImageClick}
                 />
         }
     )
@@ -370,7 +311,6 @@ export default function App() {
                 handleSubmitClick={handleSubmitClick}
                 handleChange={handleChange}
                 formData={formData}
-                hideForm={hideForm}
             />
         </div>
     )

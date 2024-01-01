@@ -27,7 +27,7 @@ export default function Card(props) {
                 className="imageOfLocation" 
                 src={props.info.image} 
                 alt={props.info.alt} 
-                onClick={() => props.handleImageClick(props.id)}
+                onCLick={(event) => props.handleImageClick(props.id, event)}
             />
             <div className="cardInfo">
                 <span className="cardLocation">

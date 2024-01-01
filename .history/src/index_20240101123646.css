@@ -365,29 +365,20 @@ body {
     margin-top: 10px;
 }
 
-/* linear-gradient(90deg, #f97979 1.18%, #f83b3b 100%); */
+.backButton::before {
+    z-index: -1;
+    background: linear-gradient(90deg, #f97979 1.18%, #f83b3b 100%);
+}
 
 .backButton {
     background-image: url('../public/images/backArrow.png');
     border: none;
     background-size: cover;
-    height: 41px;
-    width: 41px;
+    height: 30px;
+    width: 30px;
     position: absolute;
-    top: 21px;
-    left: -60px;
-    border-radius: 10px;
-    transition: transform, 0.25s
-}
-
-.backButton:hover {
-    cursor: pointer;
-    transform: scale(1.15);
-}
-
-.backButton:active {
-    cursor: pointer;
-    transform: scale(1.25);
+    top: 20px;
+    left: -30px;
 }
 
  /* scrollbar styles */
