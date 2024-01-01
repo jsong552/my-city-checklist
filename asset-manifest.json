@@ -1,13 +1,17 @@
 {
   "files": {
-    "main.css": "/my-city-checklist/static/css/main.48f524f6.css",
-    "main.js": "/my-city-checklist/static/js/main.d46aeb0f.js",
+    "main.css": "/my-city-checklist/static/css/main.a0d83005.css",
+    "main.js": "/my-city-checklist/static/js/main.c09d2e2f.js",
+    "static/media/backArrow.png": "/my-city-checklist/static/media/backArrow.776d87eead806a870bff.png",
+    "static/media/trashIcon.png": "/my-city-checklist/static/media/trashIcon.203b9820e119ebf24fd0.png",
+    "static/media/addButton.png": "/my-city-checklist/static/media/addButton.6806ace76c461f33001a.png",
+    "static/media/menuDots.png": "/my-city-checklist/static/media/menuDots.04ad0c8c43fcd90ab58b.png",
     "index.html": "/my-city-checklist/index.html",
-    "main.48f524f6.css.map": "/my-city-checklist/static/css/main.48f524f6.css.map",
-    "main.d46aeb0f.js.map": "/my-city-checklist/static/js/main.d46aeb0f.js.map"
+    "main.a0d83005.css.map": "/my-city-checklist/static/css/main.a0d83005.css.map",
+    "main.c09d2e2f.js.map": "/my-city-checklist/static/js/main.c09d2e2f.js.map"
   },
   "entrypoints": [
-    "static/css/main.48f524f6.css",
-    "static/js/main.d46aeb0f.js"
+    "static/css/main.a0d83005.css",
+    "static/js/main.c09d2e2f.js"
   ]
 }
