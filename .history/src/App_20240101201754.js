@@ -150,7 +150,7 @@ export default function App() {
             }
 
             setAllData((prevData) => {
-                let newData = prevData.map(cardData => {
+                return prevData.map(cardData => {
                     if (cardData.id === id) {
                         let query = encodeURIComponent(cardData.city);
                         return {
@@ -168,12 +168,11 @@ export default function App() {
                         return cardData;
                     }
                 })
-
-                localStorage.setItem("allData", JSON.stringify(newData));
-                return newData;
             })
         }
         getInfo();
+
+        localStorage.setItem("allData", JSON.stringify(allData));
     }
 
     function closeCardMenu() {    
@@ -199,7 +198,7 @@ export default function App() {
 
         if (imageListLength > 0) {
             setAllData(prevData => {
-                let newData = prevData.map((cardData) => {
+                return prevData.map((cardData) => {
                     if (cardData.id === id) {
                         return (
                             {
@@ -213,11 +212,10 @@ export default function App() {
                         return {...cardData};
                     }
                 })
-
-                localStorage.setItem("allData", JSON.stringify(newData));
-                return newData;
             })
         }
+
+        localStorage.setItem("allData", JSON.stringify(allData));
     }
 
     function indexLoop(currentIndex, maxIndex) {
@@ -290,8 +288,8 @@ export default function App() {
                 newID = 1;
             }
 
-            setAllData(prevData => {
-                let newData = [
+            setAllData(prevData => (
+                [
                     ...prevData,
                     {
                         id: newID,
@@ -308,11 +306,8 @@ export default function App() {
                         editCity: "",
                         editDesc: ""
                     }
-                ];
-
-                localStorage.setItem("allData", JSON.stringify(newData));
-                return newData;
-            })
+                ]
+            ))
         }
         getInfo();
 
@@ -334,6 +329,8 @@ export default function App() {
         //         }
         //     ]
         // ))
+
+        localStorage.setItem("allData", JSON.stringify(allData));
     }
 
     function handleButtonClick() {
@@ -383,25 +380,6 @@ export default function App() {
                 />
         }
     )
-
-    React.useEffect(() => {
-        allCards =  allData.map((data) => {
-            return <Card 
-                        key={data.id}
-                        id={data.id}
-                        info={data}
-                        handleMenuDotsClick={handleMenuDotsClick}
-                        handleDelete={handleDelete}
-                        handleEdit={handleEdit}
-                        handleChange={handleChange}
-                        handleEditChange={handleEditChange}
-                        handleSaveClick={handleSaveClick}
-                        formData={formData}
-                        preview={previewMode}
-                        handleImageClick={handleImageClick}
-                    />
-        })
-    }, [allData])
 
     // JSX <APP /> COMPONENT -----------------------------------------
     return (
