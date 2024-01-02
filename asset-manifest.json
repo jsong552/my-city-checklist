@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/my-city-checklist/static/css/main.25cc353d.css",
-    "main.js": "/my-city-checklist/static/js/main.21d02e58.js",
+    "main.js": "/my-city-checklist/static/js/main.6e08123e.js",
     "static/media/backArrow.png": "/my-city-checklist/static/media/backArrow.776d87eead806a870bff.png",
     "static/media/trashIcon.png": "/my-city-checklist/static/media/trashIcon.203b9820e119ebf24fd0.png",
     "static/media/addButton.png": "/my-city-checklist/static/media/addButton.6806ace76c461f33001a.png",
     "static/media/menuDots.png": "/my-city-checklist/static/media/menuDots.04ad0c8c43fcd90ab58b.png",
     "index.html": "/my-city-checklist/index.html",
     "main.25cc353d.css.map": "/my-city-checklist/static/css/main.25cc353d.css.map",
-    "main.21d02e58.js.map": "/my-city-checklist/static/js/main.21d02e58.js.map"
+    "main.6e08123e.js.map": "/my-city-checklist/static/js/main.6e08123e.js.map"
   },
   "entrypoints": [
     "static/css/main.25cc353d.css",
-    "static/js/main.21d02e58.js"
+    "static/js/main.6e08123e.js"
   ]
 }
