@@ -31,7 +31,7 @@ export default function Card(props) {
             />}
             {!props.info.images.length > 0 && <img 
                 className="imageOfLocation" 
-                src="./my-city-checklist/images/imageNotFound.png"
+                src="/my-city-checklist/images/imageNotFound.png"
                 alt={props.info.alt} 
             />}
             <div className="cardInfo">
