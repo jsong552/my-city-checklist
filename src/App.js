@@ -169,7 +169,7 @@ export default function App() {
                     }
                 })
 
-                localStorage.setItem("allData", JSON.stringify(newData));
+                // localStorage.setItem("allData", JSON.stringify(newData));
                 return newData;
             })
         }
@@ -214,7 +214,7 @@ export default function App() {
                     }
                 })
 
-                localStorage.setItem("allData", JSON.stringify(newData));
+                // localStorage.setItem("allData", JSON.stringify(newData));
                 return newData;
             })
         }
@@ -310,7 +310,7 @@ export default function App() {
                     }
                 ];
 
-                localStorage.setItem("allData", JSON.stringify(newData));
+                // localStorage.setItem("allData", JSON.stringify(newData));
                 return newData;
             })
         }
@@ -385,23 +385,8 @@ export default function App() {
     )
 
     React.useEffect(() => {
-        allCards =  allData.map((data) => {
-            return <Card 
-                        key={data.id}
-                        id={data.id}
-                        info={data}
-                        handleMenuDotsClick={handleMenuDotsClick}
-                        handleDelete={handleDelete}
-                        handleEdit={handleEdit}
-                        handleChange={handleChange}
-                        handleEditChange={handleEditChange}
-                        handleSaveClick={handleSaveClick}
-                        formData={formData}
-                        preview={previewMode}
-                        handleImageClick={handleImageClick}
-                    />
-        })
-    }, [allData])
+        localStorage.setItem("allData", JSON.stringify(allData));
+    }, [allData]);
 
     // JSX <APP /> COMPONENT -----------------------------------------
     return (
